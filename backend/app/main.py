@@ -13,14 +13,19 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+
+
+from fastapi.middleware.cors import CORSMiddleware
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.cors_origin_list,
+    allow_origins=[
+        "https://skillgraph-puce-joirxytvc-sivasri9833s-projects.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 app.include_router(careers.router)
 app.include_router(skills.router)
 app.include_router(graph.router)

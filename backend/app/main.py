@@ -17,7 +17,7 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://skillgraph-puce-joirxytvc-sivasri9833s-projects.vercel.app",
+        "https://skill-graph-git-main-sivasri9833s-projects.vercel.app/", 
     ],
     allow_credentials=True,
     allow_methods=["*"],
